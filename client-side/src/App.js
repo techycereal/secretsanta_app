@@ -203,11 +203,11 @@ function App() {
   }
   function NewGroup(){
     return(
-      <>
+      <div style={{marginTop: "50%"}}>
       <p className='pacifico'>This is your group code DO NOT LOSE IT! <span>{createdNewGroup['groupCode']}</span></p>
       <p className='pacifico'>This is your admin code DO NOT LOSE IT! <span>{createdNewGroup['adminCode']}</span></p>
       <button className='submit-button' onClick={signins}>Go To Group</button>
-      </>
+      </div>
     )
   }
 
@@ -276,7 +276,7 @@ function App() {
     <>
   {!signedIn && 
       <div className='center-container'>
-        <div>
+        <div> 
         <input onChange={(e) => setGroupName(e.target.value)} placeholder='Create Group' className={`input-bar ${errorMessage['CreateGroup'] ? 'error' : ''}`}/>
         {errorMessage['CreateGroup'] && <p style={{color: "#800101"}}>{errorMessage['CreateGroup']}</p>}
         </div>

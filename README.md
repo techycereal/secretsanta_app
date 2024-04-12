@@ -33,7 +33,7 @@ The Secret Santa application is designed to facilitate group gift exchanges, mak
 
 ```bash
 npm install
-
+```
 
 ## Database Setup
 

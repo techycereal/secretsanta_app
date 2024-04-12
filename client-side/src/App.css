@@ -1,0 +1,313 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #C4001A;
+  color: white;
+  text-align: center;
+  font-size: 70px; /* This might be too large for very small devices */
+  padding: 20px 0;
+  margin: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for resizing */
+}
+
+/* Adjustments for tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .nav {
+    font-size: 15px; /* Slightly smaller font size */
+    padding: 5px 0; /* Slightly reduced padding */
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  .nav {
+    font-size: 50px; /* Even smaller font size for small devices */
+    padding: 5px 0; /* Further reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    font-size: 50px; /* Even smaller font size for small devices */
+    padding: 5px 0; /* Further reduced padding */
+  }
+}
+
+.html, body {
+  background-color: #007A38; /* Replace 'your-color' with your desired background color */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.pacifico { 
+	font-family: Pacifico; 
+}
+
+.input-bar {
+  margin-top: 2%;
+  height: 2.5em; /* Make height relative to font size */
+  font-size: 1.25em; /* Start with a scalable font size */
+  width: 100%; /* Use a relative width that works well on mobile and scales up */
+  max-width: 600px; /* Cap the width for very large screens */
+  border-radius: 15px;
+  border: 1px solid white;
+  padding: 0.5em; /* Add some internal padding */
+  margin: 10px 0;
+  
+}
+
+.input-bar::placeholder {
+  font-family: 'Pacifico', cursive;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* This ensures that the container takes up the full viewport height */
+  text-align: center; /* Center-aligns the text for the contained elements */
+}
+
+.delete-group-button, .submit-button {
+  border-radius: 5px;
+  border: none;
+  font-size: 1em; /* Start with a base font size */
+  padding: 0.5em 1em; /* Use em for padding to scale with font size */
+  margin-top: 1%;
+  background-color: white;
+  font-family: 'Pacifico', cursive;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: auto; /* Let width be determined by content and padding */
+  width: 80%; /* Adjust this value as needed to match the design */
+  max-width: 200px;
+}
+
+.toggle-sidebar-btn {
+  position: fixed;
+  top: 160px; /* Position it near the top of the sidebar */
+  left: 0;
+  z-index: 1001; /* Ensure it's above the sidebar */
+  transition: left 0.3s ease;
+  background-color: #4CAF50; /* A pleasant green background */
+  color: white; /* White text for contrast */
+  border: none; /* Remove default border */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+  padding: 10px 15px; /* Padding to increase area for easier clicking/tapping */
+  cursor: pointer; /* Cursor indicates it's clickable */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  font-size: 20px; /* Larger font size for the arrow icon */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.toggle-sidebar-btn:hover {
+  background-color: #369456; /* Slightly darker green on hover for feedback */
+}
+
+
+@media (min-width: 768px) {
+  .toggle-sidebar-btn {
+    display: none; /* Hide the button on larger screens if not needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .delete-group-button, .submit-button {
+    width: 40%; /* Allows for more width on smaller screens */
+  }
+  .center-container {
+    height: 100vh; /* This ensures that the container takes up the full viewport height */
+  }
+}
+
+@media (max-width: 768px) {
+  .delete-group-button, .submit-button {
+    width: 40%; /* Allows for more width on smaller screens */
+  }}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .input-bar {
+    font-size: 0.9em; /* Slightly smaller font size for smaller devices */
+    width: 90%; /* Increase width to take more screen space */
+  }
+}
+@media (max-width: 480px) {
+  .delete-group-button, .submit-button {
+    width: 40%; /* Allows for more width on smaller screens */
+  }}
+@media (max-width: 480px) {
+  .input-bar{
+    font-size: 0.8em; /* Even smaller font size for very small devices */
+    padding: 0.4em 0.8em; /* Adjust padding */
+  }
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.error {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  border-color: #C4001A;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  width: 90%; /* More responsive width */
+  max-width: 300px; /* Max width to prevent it from being too wide */
+  height: auto; /* Allow height to grow as needed, based on content */
+  padding: 1rem; /* Padding inside the modal for spacing */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: solid;
+}
+
+/* Consider adding a media query for very small devices if necessary */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%; /* Allow the modal to take more screen space on very small devices */
+    padding: 1rem;
+  }
+}
+.close-button {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Styles for the delete button container */
+.delete-group-container {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+ 
+/* Optional: Style for the delete button itself */
+.delete-group-button {
+  /* Add your styles here (e.g., padding, background color, etc.) */
+  background-color: red;
+  width: 100%;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+
+
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 50px - 120px);
+  position: fixed;
+  left: 0;
+  top: 150px;
+  width: 200px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 150px; /* Smaller sidebar for tablets and mobile phones */
+    padding: 15px; /* Adjust padding to be slightly smaller */
+    padding-top: 20px;
+    top: 135px; /* Adjust top position if your nav bar is smaller on mobile */
+  }
+}
+/* Additional class for when the sidebar is hidden */
+.sidebar-hidden {
+  left: -220px; /* Hide the sidebar */
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    left: -180px; /* Hide sidebar off-screen by default */
+    width: 150px; /* Even smaller width for very small devices */
+    padding-top: 60px;
+    top: 95px; /* Adjust top position if your nav bar is smaller on mobile */
+  }
+
+  /* Consider adding a class to manage the visibility when toggled */
+  .sidebar-visible {
+    left: 0; /* Bring the sidebar into view */
+  }
+}
+.sidebar-toggle {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  width: 25px; /* Adjust based on your design preferences */
+  height: 25px; /* Adjust based on your design preferences */
+  cursor: pointer;
+  background-color: #ccc; /* Light grey background */
+  color: #333; /* Dark text color for contrast */
+  border: none;
+  border-radius: 50%; /* Circular button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Adjust based on your design preferences */
+  font-weight: bold;
+}

@@ -11,9 +11,13 @@ The Secret Santa application is designed to facilitate group gift exchanges, mak
 - **Admin Features**: Special admin codes for group management and additional controls.
 
 ## Technology Stack
+
 - **Node.js**: Server-side JavaScript runtime.
 - **Express**: Web application framework for Node.js.
 - **SQLite3**: SQL database engine used for storing all application data.
+- **React**: A JavaScript library for building user interfaces.
+- **HTML**: Standard markup language for creating web pages.
+- **CSS**: Style sheet language used for describing the presentation of a document written in HTML or XML.
 - **Body-Parser**: Middleware for parsing incoming request bodies.
 - **CORS**: Middleware to enable Cross-Origin Resource Sharing.
 
